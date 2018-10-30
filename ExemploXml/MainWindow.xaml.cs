@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace ExemploXml {
     /// <summary>
@@ -35,6 +36,9 @@ namespace ExemploXml {
                 string caminho = file.FileName;
                 XmlDocument doc = new XmlDocument();
                 doc.Load(caminho);
+                XDocument xml = XDocument.Load(caminho);
+                string version = xml.Declaration.Version;
+                MessageBox.Show(version);
                 XmlNodeList nodes = doc.SelectNodes("clientes");
                 List<string> detalhes = new List<string>();
                 foreach (XmlNode item in nodes) {
