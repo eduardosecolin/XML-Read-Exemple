@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
-    </Grid>
+		<TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="61,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+		<Label x:Name="label" Content="Nome" HorizontalAlignment="Left" Margin="61,29,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="txtSexo" HorizontalAlignment="Left" Height="23" Margin="230,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+		<Label x:Name="label_Copy" Content="Sexo" HorizontalAlignment="Left" Margin="230,29,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="txtEndereco" HorizontalAlignment="Left" Height="23" Margin="400,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="359"/>
+		<Label x:Name="label_Copy1" Content="Endereco" HorizontalAlignment="Left" Margin="400,29,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="label_Copy2" Content="Detalhes" HorizontalAlignment="Left" Margin="61,100,0,0" VerticalAlignment="Top"/>
+		<Button x:Name="btnImportar" Content="Importar xml" HorizontalAlignment="Left" Margin="61,330,0,0" VerticalAlignment="Top" Width="325" Height="35" Click="btnImportar_Click"/>
+		<Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="434,330,0,0" VerticalAlignment="Top" Width="325" Height="35"/>
+		<ListView x:Name="lsClientes" HorizontalAlignment="Left" Height="169" Margin="61,126,0,0" VerticalAlignment="Top" Width="698">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn/>
+				</GridView>
+			</ListView.View>
+		</ListView>
+
+	</Grid>
 </Window>
